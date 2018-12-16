@@ -6,7 +6,7 @@ public class Game {
     private Server server;
     private Frame frame;
 
-    public static void main (String [] args) {
+    public static void main (String[] args) {
 	    new Game(1);
         new Game(0);
     }
