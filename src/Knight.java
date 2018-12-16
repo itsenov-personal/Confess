@@ -15,7 +15,7 @@ public class Knight extends Piece{
 					moves[i + t][j + 2 * s] = checkMove(i + t, j + 2 * s);
 					threatens[i + t][j + 2 * s] = true;
 				}
-				if (i + 2 * t < 8 && j + s < 8 && i + 2* t > 0 && j + s > 0){
+				if (i + 2 * t < 8 && j + s < 8 && i + 2* t >= 0 && j + s >= 0){
 					moves[i + 2 * t][j + s] = checkMove(i + 2*t, j + s);
 					threatens[i + 2 * t][j + s] = true;
 				}
@@ -30,7 +30,7 @@ public class Knight extends Piece{
 				if (i + t < 8 && j + 2 * s < 8 && i + t >= 0 && j + 2 * s >= 0) {
 					threatens[i + t][j + 2 * s] = true;
 				}
-				if (i + 2 * t < 8 && j + s < 8 && i + 2* t > 0 && j + s > 0){
+				if (i + 2 * t < 8 && j + s < 8 && i + 2* t >= 0 && j + s >= 0){
 					threatens[i + 2 * t][j + s] = true;
 				}
 			}

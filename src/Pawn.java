@@ -19,17 +19,17 @@ public class Pawn extends Piece {
 
 		if (!tiles[i][j + UP].getPieceIn())
 			moves[i][j + UP] = checkMove(i, j + UP);
-		if (i + 1 < 8 && j + UP < 8 && j + UP > 0) {
+		if (i + 1 < 8 && j + UP < 8 && j + UP >= 0) {
 			if (tiles[i + 1][j + UP].getPieceIn()) {
 				moves[i + 1][j + UP] = checkMove(i + 1, j + UP);
 			}
 		}
-		if (i - 1 > 0 && j + UP < 8 && j + UP > 0) {
+		if (i - 1 >= 0 && j + UP < 8 && j + UP >= 0) {
 			if (tiles[i - 1][j + UP].getPieceIn()) {
 				moves[i - 1][j + UP] = checkMove(i - 1, j + UP);
 			}
 		}
-		if (!hasMoved && j + 2 * UP > 0 && j + 2*UP < 8)
+		if (!hasMoved && j + 2 * UP >= 0 && j + 2*UP < 8)
 			if (!tiles[i][j + 2 * UP].getPieceIn() &&
 					!tiles[i][j + UP].getPieceIn())
 				moves[i][j + 2 * UP] = checkMove(i, j + 2 * UP);
@@ -37,10 +37,10 @@ public class Pawn extends Piece {
 
 	public void updateThreatens(){
 		threatensReset();
-		if (i + 1 < 8 && j + UP < 8 && j + UP > 0) {
+		if (i + 1 < 8 && j + UP < 8 && j + UP >= 0) {
 			threatens[i + 1][j + UP] = true;
 		}
-		if (i - 1 > 0 && j + UP < 8 && j + UP > 0) {
+		if (i - 1 >= 0 && j + UP < 8 && j + UP >= 0) {
 			threatens[i - 1][j + UP] = true;
 		}
 	}

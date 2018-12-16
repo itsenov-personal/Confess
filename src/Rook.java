@@ -6,6 +6,7 @@ public class Rook extends Piece{
 		super.readImage();
 	}
 
+
 	public void updateMoves(){
     	movesReset();
 		int[] neighbors = {-1, 0, 1};
